@@ -63,13 +63,32 @@ const Header = () => {
             <FiUser className="hover:text-sky-text duration-200 cursor-pointer" />
             <div className="relative block">
               <FiStar className="hover:text-sky-text duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {/* {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"} */}
+            </span>
+            </div>
+            <div className="relative block">
+              <FiShoppingBag className="hover:text-sky-text duration-200 cursor-pointer" />
+            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+              {/* {cartProduct?.length > 0 ? cartProduct?.length : "0"} */}
             </span>
             </div>
            </div>
       
       </div>
+          <div className="w-full bg-dark-text text-white-text">
+            <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
+              <p className="flex items-center gap-1">Select Category <FaChevronDown/></p>
+              {
+                bottomNavigation.map(({title}) => (
+                  <p key={title} className="uppercase hidden md:inline-flex text-sm font-semibold text-white-text/90 hover:text-white-text duration-200 relative overflow-hidden group cursor-pointer">
+                    {title}
+                    <span className="inline-flex w-full h-[1px] bg-white-text absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300 " />
+                  </p>
+              ))}
+            </Container>
+          </div>
+
     </div>
   );
 };

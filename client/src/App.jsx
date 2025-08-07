@@ -6,11 +6,9 @@ function App() {
 
   return (
     <main>
-      <Header/>
       <Container>
         <p>Ecom Dude</p>
       </Container>
-      <Footer/>
     </main>
   )
 }
