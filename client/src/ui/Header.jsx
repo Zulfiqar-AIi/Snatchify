@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 // import {
 //   Menu,
 //   MenuButton,
@@ -36,9 +37,9 @@ const Header = () => {
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
-        <div>
+        <Link to={"/"} className="flex items-center gap-x-2">
           <img src={logo} alt="logo" className="w-44" />
-        </div>
+        </Link>
         
         {/* SearchBar */}
         <div className="hidden md:inline-flex max-w-3xl w-full relative">
@@ -60,19 +61,21 @@ const Header = () => {
         </div>
         {/* Menubar */}
            <div className="flex items-center gap-x-6 text-2xl">
+            <Link to={"/profile"} className="relative block">
             <FiUser className="hover:text-sky-text duration-200 cursor-pointer" />
-            <div className="relative block">
+            </Link>
+            <Link to={"/favourite"} className="relative block">
               <FiStar className="hover:text-sky-text duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4"> 0
               {/* {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"} */}
             </span>
-            </div>
-            <div className="relative block">
+            </Link>
+            <Link to={"/cart"} className="relative block">
               <FiShoppingBag className="hover:text-sky-text duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            <span className="inline-flex items-center justify-center bg-red-text text-white-text absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4"> 0
               {/* {cartProduct?.length > 0 ? cartProduct?.length : "0"} */}
             </span>
-            </div>
+            </Link>
            </div>
       
       </div>
@@ -80,11 +83,11 @@ const Header = () => {
             <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
               <p className="flex items-center gap-1">Select Category <FaChevronDown/></p>
               {
-                bottomNavigation.map(({title}) => (
-                  <p key={title} className="uppercase hidden md:inline-flex text-sm font-semibold text-white-text/90 hover:text-white-text duration-200 relative overflow-hidden group cursor-pointer">
+                bottomNavigation.map(({title, link}) => (
+                  <Link to={link} key={title} className="uppercase hidden md:inline-flex text-sm font-semibold text-white-text/90 hover:text-white-text duration-200 relative overflow-hidden group cursor-pointer">
                     {title}
                     <span className="inline-flex w-full h-[1px] bg-white-text absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300 " />
-                  </p>
+                  </Link>
               ))}
             </Container>
           </div>
