@@ -4,7 +4,6 @@
   "description": "Admin data backup for ecommerce app",
   "main": "index.mjs",
   "type": "module",
-  
   "scripts": {
     "start": "nodemon index.mjs",
     "test": "test command by zulfiqar ali"
