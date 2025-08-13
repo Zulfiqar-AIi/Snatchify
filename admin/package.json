@@ -1,0 +1,24 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "Admin data backup for ecommerce app",
+  "main": "index.mjs",
+  "type": "module",
+  
+  "scripts": {
+    "start": "nodemon index.mjs",
+    "test": "test command by zulfiqar ali"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Snatchify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
