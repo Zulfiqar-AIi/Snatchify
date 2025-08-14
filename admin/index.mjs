@@ -15,7 +15,10 @@ const __dirname = path.dirname(__filename)
 
 const routesPath = path.resolve(__dirname, "./routes")
 const routeFiles = readdirSync(routesPath);
-console.log("Loading routes from:", routeFiles)
+routeFiles.map(async (file) => {
+  const routeModule = await import(`./routes/${file}`);
+  app.use("/", routeModule.default);
+});
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"))
