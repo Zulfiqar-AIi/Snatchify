@@ -29,38 +29,38 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
 
   // Fallback categories (use the ones you provided earlier)
-  const fallbackCategories = [
-    {
-      _id: 1002,
-      name: "TV Box",
-      image: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      _base: "tvBox",
-    },
-    {
-      _id: 1003,
-      name: "Power Tools",
-      image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      _base: "powerTools",
-    },
-    {
-      _id: 1004,
-      name: "Headphones",
-      image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      _base: "headphones",
-    },
-    {
-      _id: 1005,
-      name: "Cell Phones",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      _base: "cellPhones",
-    },
-    {
-      _id: 1006,
-      name: "Smart Watches",
-      image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      _base: "smartWatches",
-    },
-  ];
+  // const fallbackCategories = [
+  //   {
+  //     _id: 1002,
+  //     name: "TV Box",
+  //     image: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  //     _base: "tvBox",
+  //   },
+  //   {
+  //     _id: 1003,
+  //     name: "Power Tools",
+  //     image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  //     _base: "powerTools",
+  //   },
+  //   {
+  //     _id: 1004,
+  //     name: "Headphones",
+  //     image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  //     _base: "headphones",
+  //   },
+  //   {
+  //     _id: 1005,
+  //     name: "Cell Phones",
+  //     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  //     _base: "cellPhones",
+  //   },
+  //   {
+  //     _id: 1006,
+  //     name: "Smart Watches",
+  //     image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  //     _base: "smartWatches",
+  //   },
+  // ];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -157,14 +157,12 @@ const Header = () => {
                         {({ active }) => (
                           <Link
                             to={`/category/${item?._base}`}
-                            className={`${
-                              active ? 'bg-gray-700 text-white' : 'text-gray-300'
-                            } group flex items-center px-4 py-3 text-sm transition-colors duration-200`}
+                            className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
                           >
                             <img
                               src={item?.image}
                               alt="categoryImage"
-                              className="w-8 h-8 rounded-md object-cover mr-3"
+                              className="w-6 h-6 rounded-md"
                             />
                             <span className="font-medium">{item?.name}</span>
                           </Link>

@@ -3,12 +3,12 @@ const checkConfig = (server) => {
   switch (server) {
     case "production":
       config = {
-        baseUrl: "",
+        baseURL: "",
       };
       break;
     case "local":
       config = {
-        baseUrl: "http://localhost:8000",
+        baseURL: "http://localhost:8000",
       };
       break;
     default:
@@ -17,5 +17,5 @@ const checkConfig = (server) => {
   return config;
 };
 
-export const selectServer = "production";
+export const selectServer = "local";
 export const config = checkConfig(selectServer);
