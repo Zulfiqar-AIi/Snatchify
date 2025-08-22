@@ -16,7 +16,7 @@ export const categories = [
   {
     _id: 1001,
     name: "TV & Audio",
-    image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "tvAndAudio",
@@ -24,7 +24,7 @@ export const categories = [
   {
     _id: 1002,
     name: "TV Box",
-    image: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "tvBox",
@@ -32,7 +32,7 @@ export const categories = [
   {
     _id: 1003,
     name: "Power Tools",
-    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "powerTools",
@@ -40,7 +40,7 @@ export const categories = [
   {
     _id: 1004,
     name: "Headphones",
-    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "headphones",
@@ -48,7 +48,7 @@ export const categories = [
   {
     _id: 1005,
     name: "Cell Phones",
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "cellPhones",
@@ -56,7 +56,7 @@ export const categories = [
   {
     _id: 1006,
     name: "Smart Watches",
-    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "smartWatches",
@@ -64,7 +64,7 @@ export const categories = [
   {
     _id: 1007,
     name: "Game & Video",
-    image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "gameAndVideo",
@@ -72,7 +72,7 @@ export const categories = [
   {
     _id: 1008,
     name: "Robot Clean",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "robotClean",
@@ -80,7 +80,7 @@ export const categories = [
   {
     _id: 1009,
     name: "Sport Watches",
-    image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "sportWatches",
@@ -88,7 +88,7 @@ export const categories = [
   {
     _id: 1010,
     name: "Tablets",
-    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "tablets",
@@ -96,7 +96,7 @@ export const categories = [
   {
     _id: 1011,
     name: "Computers & Laptop",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "computersAndLaptop",
@@ -104,7 +104,7 @@ export const categories = [
   {
     _id: 1012,
     name: "Cameras & Photos",
-    image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80&bg=ffffff",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "camerasAndPhotos",
