@@ -9,7 +9,13 @@ const ProductList = () => {
       <div className="mb-10">
         <div className="flex items-center justify-between">
           <Title text="Top Selling Products" />
-          <Link to={"/product"}>View All Products</Link>
+          <Link
+            to={"/product"}
+            className="font-medium relative group overflow-hidden"
+          >
+            View All Products
+            <span className="absolute bottom-0 left-0 w-full block h-px bg-gray-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
+          </Link>
         </div>
         <div className="w-full h-[1px] bg-gray-200 mt-2" />
       </div>

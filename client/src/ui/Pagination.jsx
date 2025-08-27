@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { config } from "../../config";
 import { getData } from "../lib";
-import ProductCard from "./ProductCard"; // ✅ Uncomment this import
+import ProductCard from "./ProductCard"; 
 import ReactPaginate from "react-paginate";
 
 const Items = ({ currentItems }) => {
@@ -21,7 +21,7 @@ const Pagination = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const endpoint = `${config?.baseUrl}/products`;
+      const endpoint = `${config?.baseURL}/products`;
       try {
         const data = await getData(endpoint);
         setProducts(data);
