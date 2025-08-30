@@ -10,6 +10,7 @@ const Items = ({ currentItems }) => {
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
       {currentItems &&
         currentItems.map((item) => (
+          // ProductCardSideNav
           <ProductCard key={item?._id} item={item} />
         ))}
     </div>

@@ -6,6 +6,8 @@ import HomeBanner from "./ui/HomeBanner"
 import Highlights from "./ui/Highlights"
 import  Categories  from "./ui/Categories"
 import ProductList from "./ui/ProductList"
+import DiscountedBanner from "./ui/DiscountedBanner"
+import Blog from "./ui/Blog"
 
 function App() {
 
@@ -16,8 +18,8 @@ function App() {
       <Highlights/>
       <Categories/>
       <ProductList/>
-      {/* <DiscountedBanner/> */}
-      {/* <Blog/> */}
+      <DiscountedBanner/>
+      <Blog/>
     </main>
   )
 }

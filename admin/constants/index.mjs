@@ -144,7 +144,7 @@ export const highlightsProducts = [
 export const blogsData = [
   {
     _id: 4001,
-    image: "https://i.ibb.co/XbQf5HS/blogOne.webp?w=800&h=600",
+    image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop",
     title: "iPhone 15 rear camera design will be available",
     _base: "Technology",
     description:
@@ -152,15 +152,15 @@ export const blogsData = [
   },
   {
     _id: 4002,
-    image: "https://i.ibb.co/wzNpcwp/blogTwo.webp?w=800&h=600",
+    image: "https://picsum.photos/id/1/800/600",
     title: "Setup your surround sound speaker",
-    _base: "Samrt thing",
+    _base: "Smart thing",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
   },
   {
     _id: 4003,
-    image: "https://i.ibb.co/prdZ3s8/blog-Three.webp?w=800&h=600",
+    image: "https://picsum.photos/800/600?random=3",
     title: "Hook up a receiver for your home theater",
     _base: "Life style",
     description:
@@ -407,7 +407,7 @@ export const products = [
     colors: ["red", "blue", "green", "yellow", "black", "white"],
     brand: "Lorem ipsum dolor sit",
     isStock: true,
-    overView: "Cual Sim Phones",
+    overView: "Dual Sim Phones",
     isNew: true,
     _base: cat?.cellPhones,
 },
