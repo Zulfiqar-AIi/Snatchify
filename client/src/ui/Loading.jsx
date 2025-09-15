@@ -16,7 +16,7 @@ const Loading = () => {
               transformOrigin: '50% 32px',
               transform: `translateX(-50%) rotate(${index * 30}deg)`,
               opacity: 1 - (index * 0.08),
-              animation: `spin 1.2s linear infinite`,
+              animation: `loadingSpinner 1.2s linear infinite`,
               animationDelay: `${index * 0.1}s`
             }}
           />
@@ -27,12 +27,15 @@ const Loading = () => {
         Loading...
       </p>
       
-      <style jsx>{`
-        @keyframes spin {
-          0% { opacity: 1; }
-          100% { opacity: 0.1; }
-        }
-      `}</style>
+      {/* Add CSS animation to document head */}
+      <style>
+        {`
+          @keyframes loadingSpinner {
+            0% { opacity: 1; }
+            100% { opacity: 0.1; }
+          }
+        `}
+      </style>
     </div>
   );
 };

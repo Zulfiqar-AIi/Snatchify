@@ -4,7 +4,7 @@ import { config } from "../../config";
 import { getData } from "../lib";
 import Loading from "../ui/Loading";
 import Container from "../ui/Container";
-import _ , { divide } from "lodash";
+import _ from "lodash";
 import PriceTag from "../ui/PriceTag";
 import { MdOutlineStarOutline } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
@@ -23,21 +23,25 @@ const Product = () => {
   const [color, setColor] = useState("");
   const { id } = useParams();
 
-  const endpoint = id
-    ? `${config?.baseURL}/products/${id}`
-    : `${config?.baseURL}/products/`;
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const data = await getData(endpoint);
+        
         if (id) {
+          // Fetch single product when ID is present
+          const endpoint = `${config?.baseURL}/products/${id}`;
+          const data = await getData(endpoint);
+          console.log("Single product data", data);
           setProductData(data);
-          setAllProducts([]);
+          setAllProducts([]); // Clear all products when viewing single product
         } else {
+          // Fetch all products when no ID is present
+          const endpoint = `${config?.baseURL}/products/`;
+          const data = await getData(endpoint);
+          console.log("All products data", data);
           setAllProducts(data);
-          setProductData(null);
+          setProductData(null); // Clear single product when viewing all products
         }
       } catch (error) {
         console.error("Error fetching data", error);
@@ -45,8 +49,9 @@ const Product = () => {
         setLoading(false);
       }
     };
+    
     fetchData();
-  }, [id, endpoint]);
+  }, [id]); // Only depend on id, not endpoint
 
   useEffect(() => {
     if (productData) {
@@ -61,7 +66,8 @@ const Product = () => {
         <Loading />
       ) : (
         <Container>
-          {!!id && productData && _.isEmpty(allProducts) ? (
+          {id && productData ? (
+            // Show individual product page when ID exists and product data is loaded
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex flex-start">
                 <div>
@@ -70,7 +76,7 @@ const Product = () => {
                       src={item}
                       alt="img"
                       key={index}
-                      className={`w-24 cursor-pointer opacity-80 hover:opacity-100 duration-300 ${
+                      className={`w-29 cursor-pointer opacity-80 hover:opacity-100 duration-300 mb-4 rounded-lg mr-2 border-4 border-transparent ${
                         imgURL === item &&
                         "border border-gray-500 rounded-sm opacity-100"
                       }`}
@@ -91,7 +97,7 @@ const Product = () => {
                     className="text-xl"
                   />
                   <div className="flex items-center gap-1">
-                    <div className="text-base text-lightText flex items-center">
+                    <div className="text-base text-light-text flex items-center">
                       <MdOutlineStarOutline />
                       <MdOutlineStarOutline />
                       <MdOutlineStarOutline />
@@ -133,7 +139,7 @@ const Product = () => {
                     </p>
                   )}
                   <div className="flex items-center gap-x-3">
-                    {productData?.colors.map((item) => (
+                    {productData?.colors?.map((item) => (
                       <div
                         key={item}
                         className={`${
@@ -185,6 +191,7 @@ const Product = () => {
               </div>
             </div>
           ) : (
+            // Show all products page when no ID or when viewing products collection
             <div className="flex items-start gap-10">
               <CategoryFilters id={id} />
               <div>

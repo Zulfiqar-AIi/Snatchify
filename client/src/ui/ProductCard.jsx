@@ -8,11 +8,12 @@ import  FormattedPrice  from './FormattedPrice';
 import ProductCardSideNav from './ProductCardSideNav';
 
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item, setSearchText}) => {
    const [isOpen, setIsOpen] = useState(false);
   const navigation = useNavigate();
 
-  const open = () => {
+  const open = (e) => {
+    e.stopPropagation(); // Prevent event bubbling to parent click handler
     setIsOpen(true);
   };
   const close = () => {
@@ -25,9 +26,13 @@ const ProductCard = ({item}) => {
     navigation(`/product/${item?._id}`);
     setSearchText && setSearchText("");
   };
+
   return (
-    <div className= "border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
-      <div className='w-full h-60 relative p-2 group'>
+    <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
+      <div 
+        className='w-full h-60 relative p-2 group'
+        onClick={handleProduct} // Added click handler to navigate to product
+      >
         <span 
         onClick={open}
         className='bg-black text-sky-text absolute left-0 right-0 w-16 text-xs text-center py-1 rounded-md font-semibold inline-block z-10'>
@@ -37,7 +42,10 @@ const ProductCard = ({item}) => {
         className='w-full h-full rounded-md object-cover group-hover:scale-110 duration-300' />
       <ProductCardSideNav/>
       </div>
-      <div className='flex flex-col gap-2 px-2 pb-2 py-2'>
+      <div 
+        className='flex flex-col gap-2 px-2 pb-2 py-2'
+        onClick={handleProduct} // Added click handler to product details section
+      >
         <h3 className='text-xs uppercase font-semibold text-light-text'>{item?.overView}</h3>
         <h2 className='text-lg font-bold line-clamp-2'>{item?.name}</h2>
         <div className='text-base text-light-text flex items-center'>
@@ -47,7 +55,9 @@ const ProductCard = ({item}) => {
           <MdOutlineStarOutline/>
           <MdOutlineStarOutline/>
         </div>
-        <AddToCartBtn/>
+        <div onClick={(e) => e.stopPropagation()}> {/* Prevent navigation when clicking Add to Cart */}
+          <AddToCartBtn/>
+        </div>
       </div>
       <Transition 
       appear
